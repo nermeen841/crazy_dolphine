@@ -69,7 +69,7 @@ class CustomTextFormField extends StatelessWidget {
       maxLines: maxLines ?? 1,
       onEditingComplete: onEditingComplete,
       cursorColor: Colors.black,
-      style: bodyStryle(color: textGrey2, context: context),
+      style: bodyStryle(color: textcolor, context: context),
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: bodyStryle(color: textGrey2, context: context),

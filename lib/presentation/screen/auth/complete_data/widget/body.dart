@@ -744,6 +744,13 @@ class _CompleteDataBodyState extends State<CompleteDataBody> {
                   ),
                 ),
               ),
+              const VerticalSpace(value: 2),
+              CustomTextFormField(
+                hint: "notes",
+                controller: notes,
+                inputType: TextInputType.text,
+                maxLines: 7,
+              ),
               const VerticalSpace(value: 4),
               CustomGeneralButton(
                 text: LocaleKeys.FINISH.tr(),
