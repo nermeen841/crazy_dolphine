@@ -8,8 +8,6 @@ import 'package:padle_me/core/widgets/space_widget.dart';
 import 'package:padle_me/generator/locale_keys.dart';
 import 'package:padle_me/presentation/screen/checkout/widget/body.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:padle_me/presentation/screen/layout/layout.dart';
-
 import 'pages/confirm_cart/confirmcart.dart';
 
 class CheckoutScreen extends StatefulWidget {
@@ -23,7 +21,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: layoutAppbar(() => scaffoldKey.currentState!.openDrawer()),
+      appBar: layoutAppbar(),
       body: const CheckoutBody(),
       bottomNavigationBar: Container(
         width: double.infinity,

@@ -14,7 +14,7 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: layoutAppbar(() => scaffoldKey.currentState!.openDrawer()),
+      appBar: layoutAppbar(),
       body: const DetailBody(),
     );
   }

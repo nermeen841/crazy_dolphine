@@ -8,9 +8,12 @@ import 'package:padle_me/core/widgets/custom_buttons_widget.dart';
 import 'package:padle_me/core/widgets/custom_text_field.dart';
 import 'package:padle_me/core/widgets/space_widget.dart';
 import 'package:padle_me/generator/locale_keys.dart';
+import 'package:padle_me/presentation/screen/layout/layout.dart';
 import 'package:padle_me/presentation/widget/auth_welcome_message.dart';
 import 'package:padle_me/presentation/widget/body_container.dart';
 import 'package:easy_localization/easy_localization.dart';
+
+import '../../../../../core/router/router.dart';
 
 class CompleteDataBody extends StatefulWidget {
   const CompleteDataBody({super.key});
@@ -757,9 +760,7 @@ class _CompleteDataBodyState extends State<CompleteDataBody> {
                 textColor: Colors.white,
                 color: buttonColor,
                 onTap: () {
-                  if (formKey.currentState!.validate()) {
-                    // () => MagicRouter.navigateAndPopAll(const LayoutScreen());
-                  }
+                  MagicRouter.navigateAndPopAll(const LayoutScreen());
                 },
               ),
             ],

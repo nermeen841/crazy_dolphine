@@ -1,14 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:padle_me/core/constants/colors.dart';
-import 'package:padle_me/core/constants/constants.dart';
 import 'package:padle_me/core/constants/text_theme.dart';
-import 'package:padle_me/generator/locale_keys.dart';
-import 'package:easy_localization/easy_localization.dart';
-import 'package:padle_me/presentation/screen/booking/booking.dart';
-
-import 'widget/drawer.dart';
-
-final scaffoldKey = GlobalKey<ScaffoldState>();
+import 'package:padle_me/presentation/screen/home/home.dart';
+import 'package:padle_me/presentation/screen/program/program.dart';
 
 class LayoutScreen extends StatefulWidget {
   const LayoutScreen({super.key});
@@ -19,8 +14,8 @@ class LayoutScreen extends StatefulWidget {
 
 class _LayoutScreenState extends State<LayoutScreen> {
   List<Widget> screens = [
-    Container(),
-    const BookingScreen(),
+    const HomeScreen(),
+    const ProgramScreen(),
     Container(),
     Container(),
   ];
@@ -29,20 +24,18 @@ class _LayoutScreenState extends State<LayoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
-      appBar: layoutAppbar(() => scaffoldKey.currentState!.openDrawer()),
-      drawer: const DrawerItem(),
+      backgroundColor: colorWhite,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         currentIndex: currentIndex,
         elevation: 0,
-        selectedItemColor: buttonColor,
+        selectedItemColor: kMainColor,
         unselectedItemColor: const Color(0xff9B9B9B),
         showSelectedLabels: true,
         showUnselectedLabels: true,
         selectedLabelStyle: bodyStryle(
           context: context,
-          color: buttonColor,
+          color: kMainColor,
         ),
         unselectedLabelStyle: bodyStryle(
           context: context,
@@ -53,20 +46,20 @@ class _LayoutScreenState extends State<LayoutScreen> {
         }),
         items: [
           BottomNavigationBarItem(
-            icon: const Icon(Icons.star_border),
-            label: LocaleKeys.POINTS.tr(),
+            icon: const Icon(CupertinoIcons.home),
+            label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.sports_tennis_outlined),
-            label: LocaleKeys.BOOKING.tr(),
+            icon: const Icon(CupertinoIcons.list_bullet_below_rectangle),
+            label: "program",
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.storefront),
-            label: LocaleKeys.STORE.tr(),
+            label: "Booking",
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.card_membership),
-            label: LocaleKeys.MEMBERSHIP.tr(),
+            icon: const Icon(Icons.menu),
+            label: "more",
           ),
         ],
       ),

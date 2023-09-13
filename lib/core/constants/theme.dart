@@ -64,10 +64,10 @@ ThemeData themeData = ThemeData(
     entryModeIconColor: kMainColor,
   ),
   fontFamily: "Mulish",
-  scaffoldBackgroundColor: kMainColor,
-  backgroundColor: kMainColor,
+  scaffoldBackgroundColor: colorWhite,
+  backgroundColor: colorWhite,
   appBarTheme: AppBarTheme(
-    backgroundColor: kMainColor,
+    backgroundColor: colorWhite,
   ),
   bottomNavigationBarTheme:
       const BottomNavigationBarThemeData(backgroundColor: Colors.white),

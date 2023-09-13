@@ -13,6 +13,7 @@ import 'package:padle_me/presentation/screen/auth/register/register.dart';
 import 'package:padle_me/presentation/widget/auth_welcome_message.dart';
 import 'package:padle_me/presentation/widget/body_container.dart';
 import 'package:easy_localization/easy_localization.dart';
+import '../../../layout/layout.dart';
 import '../../forget_password/forget_password.dart';
 
 class LoginBody extends StatefulWidget {
@@ -115,9 +116,7 @@ class _LoginBodyState extends State<LoginBody> {
                 textColor: Colors.white,
                 color: buttonColor,
                 onTap: () {
-                  if (formKey.currentState!.validate()) {
-                    // MagicRouter.navigateAndPopAll(const LayoutScreen());
-                  }
+                  MagicRouter.navigateAndPopAll(const LayoutScreen());
                 },
               ),
               Row(

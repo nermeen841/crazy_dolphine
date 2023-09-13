@@ -4,6 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:html/parser.dart';
+import 'package:padle_me/core/router/router.dart';
+import 'package:padle_me/presentation/screen/auth/login/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'colors.dart';
 import 'text_theme.dart';
@@ -200,23 +202,17 @@ logoutDialog({
 }
 
 /////////////////////////////////////////////////////////////////////////////
-AppBar layoutAppbar(VoidCallback ontap) {
+AppBar layoutAppbar() {
   return AppBar(
     automaticallyImplyLeading: false,
     elevation: 0,
-    leading: IconButton(
-      icon: const Icon(
-        Icons.menu,
-        color: Colors.white,
-      ),
-      onPressed: ontap,
-    ),
+    backgroundColor: Colors.white,
     actions: [
       IconButton(
-        onPressed: () {},
-        icon: const Icon(
-          CupertinoIcons.cart,
-          color: Colors.white,
+        onPressed: () => MagicRouter.navigateAndPopAll(const LoginScreen()),
+        icon: Icon(
+          Icons.scuba_diving_sharp,
+          color: kMainColor,
         ),
       ),
     ],

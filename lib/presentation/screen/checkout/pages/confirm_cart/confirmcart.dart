@@ -7,7 +7,6 @@ import 'package:padle_me/core/widgets/space_widget.dart';
 import 'package:padle_me/generator/locale_keys.dart';
 import 'package:padle_me/presentation/screen/checkout/pages/confirm_cart/body.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:padle_me/presentation/screen/layout/layout.dart';
 
 class ConfirmCartScreen extends StatefulWidget {
   const ConfirmCartScreen({super.key});
@@ -20,7 +19,7 @@ class _ConfirmCartScreenState extends State<ConfirmCartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: layoutAppbar(() => scaffoldKey.currentState!.openDrawer()),
+      appBar: layoutAppbar(),
       body: const ConfirmCartBody(),
       bottomNavigationBar: Container(
         width: double.infinity,

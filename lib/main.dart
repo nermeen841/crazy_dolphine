@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:padle_me/core/constants/theme.dart';
 import 'package:padle_me/core/network/appbinding.dart';
 import 'package:padle_me/core/router/router.dart';
+import 'package:padle_me/presentation/screen/layout/layout.dart';
 import 'core/utiles/bloc_observer.dart';
 import 'generator/codegen_loader.dart';
 import 'presentation/screen/splash/splash.dart';
@@ -76,7 +77,7 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: themeData,
-      home: const SplashScreen(),
+      home: const LayoutScreen(),
     );
   }
 }
